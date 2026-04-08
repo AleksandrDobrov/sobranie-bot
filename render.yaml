@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: clan-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run_bot_fixed.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
+      - key: WEBAPP_URL
+        sync: false
+    autoDeploy: true
