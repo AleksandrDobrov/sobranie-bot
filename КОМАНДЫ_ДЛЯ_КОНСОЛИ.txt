@@ -1,0 +1,52 @@
+# КОМАНДЫ ДЛЯ КОПОРКИ В КОНСОЛИ PYTHONANYWHERE
+# Скопируйте и вставьте эти команды по очереди
+
+# 1. Переход в домашнюю директорию
+cd /home/ваше_имя/
+
+# 2. Клонирование репозитория (замените ссылку на вашу)
+git clone https://github.com/yourusername/sobranie-bot.git
+
+# 3. Переход в папку проекта
+cd sobranie-bot
+
+# 4. Проверка файлов (должны увидеть все .py файлы)
+ls -la
+
+# 5. Создание виртуального окружения
+python3.10 -m venv venv
+
+# 6. Активация виртуального окружения
+source venv/bin/activate
+
+# 7. Установка зависимостей
+pip install -r requirements_pythonanywhere.txt
+
+# 8. Создание .env файла
+nano .env
+
+# 9. Проверка что все установилось
+pip list
+
+# 10. Тестовый запуск бота (для проверки)
+python pythonanywhere_app.py
+
+# 11. Если нужно перезапустить веб-сервер
+touch /var/www/ваше_имя_pythonanywhere_com_wsgi.py
+
+# 12. Проверка логов ошибок
+tail -f /var/www/ваше_имя_pythonanywhere_com_error.log
+
+# 13. Проверка логов доступа
+tail -f /var/www/ваше_имя_pythonanywhere_com_access.log
+
+# 14. Если нужно удалить все и начать заново
+cd /home/ваше_имя/
+rm -rf sobranie-bot
+rm -rf sobranie_bot_wsgi.py
+
+# 15. Проверка статуса бота через curl
+curl https://ваше_имя.pythonanywhere.com/status
+
+# 16. Перезапуск бота через curl
+curl https://ваше_имя.pythonanywhere.com/restart

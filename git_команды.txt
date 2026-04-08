@@ -1,0 +1,23 @@
+# КОМАНДЫ ДЛЯ ЗАГРУЗКИ НА GITHUB
+# Скопируй и вставь по очереди
+
+# 1. Инициализация Git (если еще не сделано)
+cd /home/SOBRANIE/sobranie-bot/sobranie-bot
+git init
+
+# 2. Добавление всех файлов
+git add .
+
+# 3. Первый коммит
+git commit -m "Initial commit - SOBRANIE Discord Bot"
+
+# 4. Подключение к GitHub (замени на твой ник)
+git remote add origin https://github.com/твой_ник/sobranie-bot.git
+
+# 5. Отправка на GitHub
+git branch -M main
+git push -u origin main
+
+# ЕСЛИ БУДЕТ СПРАШИВАТЬ ЛОГИН/ПАРОЛЬ:
+# Используй Personal Access Token вместо пароля
+# Создай тут: https://github.com/settings/tokens
